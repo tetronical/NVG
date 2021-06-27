@@ -3,30 +3,20 @@
 \docType{data}
 \name{chaosdata}
 \alias{chaosdata}
-\title{Arabidopsis QTL data on gravitropism}
+\title{Chaos Dataset}
 \format{
-An object of class `"cross"`; see [qtl::read.cross()].
-}
-\source{
-Mouse Phenome Database, <https://phenome.jax.org/projects/Moore1b>
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 10000 rows and 3 columns.
 }
 \usage{
 data(chaosdata)
 }
 \description{
-Data from a QTL experiment on gravitropism in
-Arabidopsis, with data on 162 recombinant inbred lines (Ler x
-Cvi). The outcome is the root tip angle (in degrees) at two-minute
-increments over eight hours.
+Data from three different chaotic systems are loaded.
+Each has ten thousand data points. The data imports
+Rossler system, Lorenz Data, and Mackey and Glass data into environment
 }
 \examples{
 data(chaosdata)
-}
-\references{
-Moore CR, Johnson LS, Kwak I-Y, Livny M, Broman KW,
-Spalding EP (2013) High-throughput computer vision introduces the
-time axis to a quantitative trait map of a plant growth
-response. Genetics 195:1077-1086
-([PubMed](https://pubmed.ncbi.nlm.nih.gov/23979570/))
+
 }
 \keyword{datasets}
