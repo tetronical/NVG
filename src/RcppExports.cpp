@@ -21,16 +21,6 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// main
-int main();
-RcppExport SEXP _NVG_main() {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    rcpp_result_gen = Rcpp::wrap(main());
-    return rcpp_result_gen;
-END_RCPP
-}
 // vvga
 NumericMatrix vvga(NumericMatrix v);
 RcppExport SEXP _NVG_vvga(SEXP vSEXP) {
@@ -45,7 +35,6 @@ END_RCPP
 
 static const R_CallMethodDef CallEntries[] = {
     {"_NVG_VGA", (DL_FUNC) &_NVG_VGA, 1},
-    {"_NVG_main", (DL_FUNC) &_NVG_main, 0},
     {"_NVG_vvga", (DL_FUNC) &_NVG_vvga, 1},
     {NULL, NULL, 0}
 };

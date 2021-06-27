@@ -6,7 +6,7 @@ Author: Gunturu Vamsi Krishna
 Maintainer: IITB<vamsikrishna.g@iitb.ac.in>
 Description: It takes a time series data and converts into complex network
     And also it converts a multidimensional timeseries data into complex network
-License: GPL
+License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: true
 Imports: Rcpp (>= 1.0.6.7)

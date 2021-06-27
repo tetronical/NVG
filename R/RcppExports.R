@@ -5,10 +5,6 @@ VGA <- function(t) {
     .Call(`_NVG_VGA`, t)
 }
 
-main <- function() {
-    .Call(`_NVG_main`)
-}
-
 vvga <- function(v) {
     .Call(`_NVG_vvga`, v)
 }
