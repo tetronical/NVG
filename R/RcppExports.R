@@ -9,7 +9,7 @@
 #' @note This procedure returns diagonal elements of adjacency matrix as connected (1).
 #' @export
 #' @examples
-#' fahrenheit_to_kelvin(32)
+#' VGA(sample(10))
 
 
 VGA <- function(t) {
