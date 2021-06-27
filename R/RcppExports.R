@@ -11,14 +11,22 @@
 #' @examples
 #' VGA(sample(10))
 
-
 VGA <- function(t) {
     .Call(`_NVG_VGA`, t)
 }
 
-main <- function() {
-    .Call(`_NVG_main`)
-}
+#' Converts multivariate Time series data in to Complex Networks
+#'
+#' This function takes multiple variables and convert into complex network
+#' @param v multivariate time series vector.
+#' @return Returns adjacency matrix of the time series.
+#' @note This procedure returns diagonal elements of adjacency matrix as connected (1).
+#' @note When the evaluation function is equal, a connection is establishes in the matrix (not in accordance with Lacasa et al., 2009)
+#' @references Lacasa., Sivakumar, B (2009). XXX JOH, V(3),1.
+#' @export
+#' @examples
+#' VGA(sample(10))
+
 
 vvga <- function(v) {
     .Call(`_NVG_vvga`, v)
