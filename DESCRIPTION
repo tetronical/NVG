@@ -3,10 +3,10 @@ Type: Package
 Title: Visibility Graph Algorithms
 Version: 0.1.0
 Author: Gunturu Vamsi Krishna
-Maintainer: <vamsikrishna.g@iitb.ac.in>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Maintainer: IITB<vamsikrishna.g@iitb.ac.in>
+Description: It takes a time series data and converts into complex network
+    And also it converts a multidimensional timeseries data into complex network
+License: GPL
 Encoding: UTF-8
 LazyData: true
 Imports: Rcpp (>= 1.0.6.7)
