@@ -21,6 +21,19 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// phase_space
+NumericMatrix phase_space(NumericVector x, int m, int tau);
+RcppExport SEXP _NVG_phase_space(SEXP xSEXP, SEXP mSEXP, SEXP tauSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NumericVector >::type x(xSEXP);
+    Rcpp::traits::input_parameter< int >::type m(mSEXP);
+    Rcpp::traits::input_parameter< int >::type tau(tauSEXP);
+    rcpp_result_gen = Rcpp::wrap(phase_space(x, m, tau));
+    return rcpp_result_gen;
+END_RCPP
+}
 // vvga
 NumericMatrix vvga(NumericMatrix v);
 RcppExport SEXP _NVG_vvga(SEXP vSEXP) {
@@ -35,6 +48,7 @@ END_RCPP
 
 static const R_CallMethodDef CallEntries[] = {
     {"_NVG_VGA", (DL_FUNC) &_NVG_VGA, 1},
+    {"_NVG_phase_space", (DL_FUNC) &_NVG_phase_space, 3},
     {"_NVG_vvga", (DL_FUNC) &_NVG_vvga, 1},
     {NULL, NULL, 0}
 };

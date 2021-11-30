@@ -5,6 +5,10 @@ VGA <- function(t) {
     .Call(`_NVG_VGA`, t)
 }
 
+phase_space <- function(x, m, tau) {
+    .Call(`_NVG_phase_space`, x, m, tau)
+}
+
 vvga <- function(v) {
     .Call(`_NVG_vvga`, v)
 }
