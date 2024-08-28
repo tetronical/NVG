@@ -5,6 +5,10 @@ VGA <- function(t) {
     .Call(`_NVG_VGA`, t)
 }
 
+local_approx <- function(data, start_p, m, neighbors) {
+    .Call(`_NVG_local_approx`, data, start_p, m, neighbors)
+}
+
 phase_space <- function(x, m, tau) {
     .Call(`_NVG_phase_space`, x, m, tau)
 }

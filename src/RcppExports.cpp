@@ -21,6 +21,20 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// local_approx
+NumericVector local_approx(NumericVector data, int start_p, int m, int neighbors);
+RcppExport SEXP _NVG_local_approx(SEXP dataSEXP, SEXP start_pSEXP, SEXP mSEXP, SEXP neighborsSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NumericVector >::type data(dataSEXP);
+    Rcpp::traits::input_parameter< int >::type start_p(start_pSEXP);
+    Rcpp::traits::input_parameter< int >::type m(mSEXP);
+    Rcpp::traits::input_parameter< int >::type neighbors(neighborsSEXP);
+    rcpp_result_gen = Rcpp::wrap(local_approx(data, start_p, m, neighbors));
+    return rcpp_result_gen;
+END_RCPP
+}
 // phase_space
 NumericMatrix phase_space(NumericVector x, int m, int tau);
 RcppExport SEXP _NVG_phase_space(SEXP xSEXP, SEXP mSEXP, SEXP tauSEXP) {
@@ -48,6 +62,7 @@ END_RCPP
 
 static const R_CallMethodDef CallEntries[] = {
     {"_NVG_VGA", (DL_FUNC) &_NVG_VGA, 1},
+    {"_NVG_local_approx", (DL_FUNC) &_NVG_local_approx, 4},
     {"_NVG_phase_space", (DL_FUNC) &_NVG_phase_space, 3},
     {"_NVG_vvga", (DL_FUNC) &_NVG_vvga, 1},
     {NULL, NULL, 0}

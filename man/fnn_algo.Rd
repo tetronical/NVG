@@ -3,24 +3,36 @@
 \docType{package}
 \name{fnn_algo}
 \alias{fnn_algo}
-\title{False Nearset Neighbour}
-\format{
-An object of class \code{function} of length 1.
-}
+\title{False Nearest Neighbour}
 \usage{
-fnn_algo(x,tau=1,mmax=5)
+fnn_algo(x, tau = 1,  mmax = 10, rtol = 15, atol = 2, plot = FALSE)
+}
+\arguments{
+\item{x}{A numeric vector or matrix.}
+
+\item{tau}{An integer specifying the time delay. Default is 1.}
+
+\item{mmax}{An integer specifying the maximum embedding dimension. Default is 10.}
+
+\item{rtol}{A numeric value for the relative tolerance. Default is 15.}
+
+\item{atol}{A numeric value for the absolute tolerance. Default is 2.}
+
+\item{plot}{Logical, whether to plot the results. Default is FALSE.}
+}
+\value{
+A matrix of False Nearest Neighbour values.
 }
 \description{
-False Nearest Neighbour a dimensionality estimation method.
-This method uses delay value to reconstruct phase space and identifies dimension
-based on true neighbours
-Rossler system, Lorenz Data, and Mackey and Glass data into environment
+False Nearest Neighbour is a dimensionality estimation method.
+This method uses a delay value to reconstruct phase space and identifies the dimension
+based on true neighbors. Examples include Rossler system, Lorenz Data, and Mackey and Glass data.
 }
 \examples{
+\dontrun{
 data(chaosdata)
-
-fnn_algo(chaosdata$Lorenz,tau=3,mmax=10)
-
+fnn_algo(x, tau = 1, mmax = 10, rtol = 15, atol = 2, plot = FALSE)
+}
 }
 \keyword{Dimension,}
 \keyword{FNN,}

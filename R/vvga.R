@@ -7,15 +7,17 @@
 #'
 #' @note This procedure returns diagonal elements of adjacency matrix as connected (1).
 #'
-#' @usage vvga(m)
-#' m is a multi-dimensional vector
+#' @param v A multi-dimensional vector.
+#'
+#' @usage vvga(v)
 #'
 #' @keywords NVG, 'Visibility Graphs', Graphs, 'Complex Network'
 #'
 #' @examples
+#' \dontrun{
 #' data(chaosdata)
-#' m<-fnn_algo(chaosdata$Lorenz,tau=3,mmax=10)
-#' vvga(m)
-#'
+#' v<-fnn_algo(chaosdata$Lorenz,tau=3,mmax=10)
+#' vvga(v)
+#' }
 #'
 'vvga'

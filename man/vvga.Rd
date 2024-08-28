@@ -8,8 +8,10 @@
 An object of class \code{function} of length 1.
 }
 \usage{
-vvga(m)
-m is a multi-dimensional vector
+vvga(v)
+}
+\arguments{
+\item{v}{A multi-dimensional vector.}
 }
 \description{
 This procedure uses time series vector and convert it
@@ -19,10 +21,11 @@ into network called temporal network
 This procedure returns diagonal elements of adjacency matrix as connected (1).
 }
 \examples{
+\dontrun{
 data(chaosdata)
-m<-fnn_algo(chaosdata$Lorenz,tau=3,mmax=10)
-vvga(m)
-
+v<-fnn_algo(chaosdata$Lorenz,tau=3,mmax=10)
+vvga(v)
+}
 
 }
 \keyword{'Complex}

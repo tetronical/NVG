@@ -1,3 +1,5 @@
 exportPattern("^[[:alpha:]]+")
 importFrom(Rcpp, evalCpp)
+importFrom("stats", "acf", "sd")
+importFrom(tseriesChaos, mutual)
 useDynLib(NVG, .registration = TRUE)

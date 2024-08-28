@@ -2,6 +2,7 @@
 % Please edit documentation in R/VGA.R
 \docType{package}
 \name{VGA}
+\alias{-package}
 \alias{VGA}
 \title{Natural Visibility Graph}
 \format{
@@ -9,6 +10,9 @@ An object of class \code{function} of length 1.
 }
 \usage{
 VGA(t)
+}
+\arguments{
+\item{t}{A numeric vector.}
 }
 \description{
 This procedure uses time series vector and convert it

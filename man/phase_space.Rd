@@ -10,6 +10,13 @@ An object of class \code{function} of length 1.
 \usage{
 phase_space(x,m,tau)
 }
+\arguments{
+\item{x}{A numeric vector.}
+
+\item{m}{Embedding dimension.}
+
+\item{tau}{Time delay.}
+}
 \description{
 This procedure uses time series data and convert it
 into vector/multi-variate time series data
